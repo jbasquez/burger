@@ -78,7 +78,7 @@ Having an active and healthy commit history on GitHub is important for your futu
 
 3. Still in the `db` folder, create a `seeds.sql` file. In this file, write insert queries to populate the `burgers` table with at least three entries.
 
-4. Run the `schema.sql` and `seeds.sql` files into the mysql server from the command line
+<!-- 4. Run the `schema.sql` and `seeds.sql` files into the mysql server from the command line
 
 5. Now you're going to run these SQL files.
 
@@ -90,7 +90,7 @@ Having an active and healthy commit history on GitHub is important for your futu
 
    * Now insert the entries you defined in `seeds.sql` by running the file: `source seeds.sql`.
 
-   * Close out of the MySQL command line tool: `exit`.
+   * Close out of the MySQL command line tool: `exit`. -->
 
 #### Config Setup
 
