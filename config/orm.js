@@ -12,4 +12,20 @@ module.exports = (app) =>{
             devoured: true //place holder
         }).then((results) =>res.json(results));
     })
+    const updatePost = (post) => {
+        fetch('/api/posts', {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(post),
+        })
+          .then(() => {
+            console.log('Attempting update to post');
+            window.location.href = '/blog';
+          })
+          .catch((error) => {
+            console.error('Error:', error);
+          });
+      };
 };
