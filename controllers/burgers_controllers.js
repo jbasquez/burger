@@ -6,6 +6,7 @@ router.get('/', (req, res) => {
     cat.all((data) => {
       const hbsObject = {
         burger: data,
+        devoured: data
       };
       console.log(hbsObject);
       res.render('index', hbsObject);
