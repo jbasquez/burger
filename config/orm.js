@@ -34,3 +34,12 @@ let queryString = "SELECT * FROM " + tableInput + ";";
 
 //how to make connection.queery with mysql function
 // functions inside module.exports
+
+app.get('/burgers', (req, res) => {
+    mysqlConnection.query('SELECT * FROM burgers', (err, rows, fields)=>{
+        if(!err)
+        res.send(rows);
+        else
+        console.log(err);
+    })
+});

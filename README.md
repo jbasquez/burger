@@ -80,7 +80,7 @@ Having an active and healthy commit history on GitHub is important for your futu
 
 4. Run the `schema.sql` and `seeds.sql` files into the mysql server from the command line
 
-<!-- 5. Now you're going to run these SQL files.
+5. Now you're going to run these SQL files.
 
    * Make sure you're in the `db` folder of your app.
 
@@ -90,7 +90,7 @@ Having an active and healthy commit history on GitHub is important for your futu
 
    * Now insert the entries you defined in `seeds.sql` by running the file: `source seeds.sql`.
 
-   * Close out of the MySQL command line tool: `exit`. -->
+   * Close out of the MySQL command line tool: `exit`.
 
 #### Config Setup
 
