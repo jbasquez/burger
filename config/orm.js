@@ -43,3 +43,12 @@ app.get('/burgers', (req, res) => {
         console.log(err);
     })
 });
+
+app.delete('/burgers/:id', (req, res) => {
+    mysqlConnection.query('DELETE FROM Employee WHERE EmpID = ?',[req.params.id], (err, rows, fields)=>{
+        if(!err)
+        res.send('Delete successful.');
+        else
+        console.log(err);
+    })
+});
