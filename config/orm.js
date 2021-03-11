@@ -52,3 +52,13 @@ app.delete('/burgers/:id', (req, res) => {
         console.log(err);
     })
 });
+app.put('/burgers', (req, res) => {
+    var sql = "SET @id = ?; SET @burger_name = ?; Set @devoured = ?;"
+
+    mysqlConnection.query(sql,[],[req.params.id],(err, rows, fields)=>{
+        if(!err)
+        res.send();
+        else
+        console.log(err);
+    })
+})
