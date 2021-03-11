@@ -52,6 +52,20 @@ app.delete('/burgers/:id', (req, res) => {
         console.log(err);
     })
 });
+app.post('/burgers', (req, res) => {
+    let bur =req.body;
+    var sql = "SET @id = ?; SET @burger_name = ?; Set @devoured = ?;\
+    CALL BurgerAddOrEdit(@id, @burger_name, @devoured);";
+
+    mysqlConnection.query(sql,[bur.id, bur.burger_name, bur.devoured],(err, rows, fields)=>{
+        if(!err)
+            rows.forEach(element => {
+                if(element.constructor == Array)
+                res.send('Added burger:'+ element[0].burger_name);
+            });
+        console.log(err);
+    })
+});
 
 app.put('/burgers', (req, res) => {
     let bur =req.body;
@@ -66,4 +80,4 @@ app.put('/burgers', (req, res) => {
             });
         console.log(err);
     })
-})
+});
